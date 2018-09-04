@@ -1,30 +1,31 @@
-/*¶¨Òåº¯Êıdefine, ÒıÈë²å¼ş£¨ÒıÈë²å¼ş¹²ÓĞÁ½ÖÖ·½·¨£¬
-1.main.js-shimÖĞÅäÖÃ£¨Òì²½¼ÓÔØ³ÉÒ»¸öÄ£¿é£©£¬
-2.defineÖĞ¼ÓÈëÊı×éÈçÏÂ£º['jquery','jquery-dialog']£©
+/*å®šä¹‰å‡½æ•°define, å¼•å…¥æ’ä»¶ï¼ˆå¼•å…¥æ’ä»¶å…±æœ‰ä¸¤ç§æ–¹æ³•ï¼Œ
+1.main.js-shimä¸­é…ç½®ï¼ˆå¼‚æ­¥åŠ è½½æˆä¸€ä¸ªæ¨¡å—ï¼‰ï¼Œ
+2.defineä¸­åŠ å…¥æ•°ç»„å¦‚ä¸‹ï¼š['jquery','jquery-dialog']ï¼‰
 <===============================>
-¸Ãº¯ÊıÓÃ»§´´½¨Ä£¿é¡£Ã¿¸öÄ£¿éÓµÓĞÒ»¸öÎ¨Ò»µÄÄ£¿éID£¬
-Ëü±»ÓÃÓÚRequireJSµÄÔËĞĞÊ±º¯Êı£¬defineº¯ÊıÊÇÒ»¸öÈ«¾Öº¯Êı£¬
-²»ĞèÒªÊ¹ÓÃrequirejsÃüÃû¿Õ¼ä.
+è¯¥å‡½æ•°ç”¨æˆ·åˆ›å»ºæ¨¡å—ã€‚æ¯ä¸ªæ¨¡å—æ‹¥æœ‰ä¸€ä¸ªå”¯ä¸€çš„æ¨¡å—IDï¼Œ
+å®ƒè¢«ç”¨äºRequireJSçš„è¿è¡Œæ—¶å‡½æ•°ï¼Œdefineå‡½æ•°æ˜¯ä¸€ä¸ªå…¨å±€å‡½æ•°ï¼Œ
+ä¸éœ€è¦ä½¿ç”¨requirejså‘½åç©ºé—´.
 <===============================>*/
 define(['jquery'],function(){
 
-$.fn.beta = function() {    
-    return this.append('<p>Beta is Go!</p>');
-};
-
-$(function(){
-  $("input[type=button][name='yy']").bind("click", function(){ 
-	$('#req-button-one').removeClass('yubi_gc');
-     	sayHey();
-
-		});
-	})
-}); 
- 
-
-
- function sayHey(){
-     alert("Hey-reuqireJs");
- }
-
-
+	$.fn.beta = function() {    
+		return this.append('<p>Beta is Go!</p>');
+	};
+	
+	$(function(){
+	  $("input[type=button][name='yy']").bind("click", function(){ 
+		$('#req-button-one').removeClass('yubi_gc');
+			 sayHey();
+	
+			});
+		})
+	}); 
+	 
+	
+	
+	 function sayHey(){
+		 alert("Hey-reuqireJs");
+	 }
+	
+	
+	
