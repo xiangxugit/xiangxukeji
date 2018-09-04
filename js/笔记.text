@@ -1,0 +1,30 @@
+1，require可以异步加载文件
+2，模块化开发  
+   一个文件就是一个模块
+  减少全局变量
+3使用
+  defin：定义模块
+  require:加载模块
+  第一个是模块名字，第二个是模块依赖，第三个 是模块的实现  最后是返回的对象
+  第一个参数是构建工具自动生成，后续方便打包
+  define('helper'，['jquery']，function($){
+	return {trim:function(str){
+		return $.trim(str);
+	}}
+  });
+
+  require加载模块：
+  第一个参数是模块名称
+  第二个参数是模块的实现
+  require(['helper'],function(helper){
+	  var str = helper.trim(' amd ')；
+	  console.log(str);
+  })
+
+
+加载文件
+ require以一个相对于baseUrl的得治来加载所有的代码的
+
+ 
+
+ 

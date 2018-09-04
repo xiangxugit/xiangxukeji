@@ -1,0 +1,3 @@
+1、项目使用require+r.js管理和打包js文件；
+//接口文档：http://www.requirejs.cn/
+//使用教程：https://blog.csdn.net/weixin_41424247/article/details/79333365
