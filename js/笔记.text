@@ -12,7 +12,6 @@
 		return $.trim(str);
 	}}
   });
-
   require加载模块：
   第一个参数是模块名称
   第二个参数是模块的实现
@@ -20,19 +19,11 @@
 	  var str = helper.trim(' amd ')；
 	  console.log(str);
   })
-
-
 加载文件
  require以一个相对于baseUrl的得治来加载所有的代码的
-
-
  学习网站：
-
  https://www.cnblogs.com/imnzq/p/6746330.html
-
  https://blog.csdn.net/bmwz508/article/details/79463675
-
- 
 
 
  

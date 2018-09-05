@@ -9,7 +9,16 @@
 <!-- requirejs -->
 
 <!-- <link rel="stylesheet" type="text/css" href="css/require.css"> -->
-<script data-main="js/main" src="js/require.js"></script>	
+<script data-main="js/main" src="./js/require.js"></script>	
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="./js/bootstrap.min.js"></script>
+
+
+
 <body class="met-navfixed">
 
 <nav class="navbar navbar-default met-nav navbar-fixed-top" role="navigation">
@@ -102,7 +111,27 @@
 </nav>
 
 <!--TODO  轮播图 -->
-
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>   
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="./index_files/1528814046.jpg" alt="First slide">
+        </div>
+        <div class="item">
+            <img src="./index_files/1528814046.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+            <img src="./index_files/1528814046.jpg" alt="Third slide">
+        </div>
+    </div>
+   
+</div>
 
 <!-- TODO 待优化 模板 -->
 

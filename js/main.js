@@ -2,8 +2,15 @@
 
 /*require配置：定义js文件路径*/
 require.config({
-    baseUrl: 'js'
+    baseUrl: 'js',
 
+    paths: {
+        jquery: [
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',  
+            'lib/jquery'  
+        ] 
+        }
+      
 	/*paths参数，用来映射模块别名。requirejs2.0更加强大，可以配置为一个数组，
 	顺序映射。当前面的路径没有成功载入时可接着使用后面的路径。如下
 	enforceDefine: true,
@@ -29,7 +36,7 @@ require.config({
 /*require 引进js文件并执行*/
 require(["jquery","jquery.alpha","jquery.beta"],function($){
 	$(function(){
-        alert($().jquery);
+        // alert($().jquery);
         $('#req-button-one').alpha().beta();
 
     });
