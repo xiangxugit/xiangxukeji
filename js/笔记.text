@@ -29,3 +29,68 @@
  
 
  
+定义模块的方法：
+
+1，函数是定义，如上图
+模块名不写
+以来模块可写不写
+
+
+
+difine({
+  username:'1',
+  name:'xiangxu'
+})
+
+
+不支持amd库的意思就是不支持，define  和require的写法的
+
+
+如modernizr.js  bootstrap， jquery插件
+
+shim就来了
+
+    shim: {
+        "Jquery-ui.custom":{
+            deps: ['Jquery','Jquery.sparkline'],
+            exports: 'Jquery_ui'
+        },
+        "Bootstrap": {
+            deps: ['Jquery'],
+            exports: 'Bootstrap'
+        },
+    },
+
+
+
+    bootstrap 可以简写
+
+    shim：{
+      'bootstrap':['jquery']
+    }
+ 
+ 根据配置完全后再全局中可不可以看到来判断是不是符合amd 的库和插件
+
+
+ backbone 和unserscore这种互相已经定义的还需要自己去研究
+
+
+ 不支持amd库的如下
+
+  "Bootstrap": {
+            
+            exports: 'Bootstrap'
+    },
+
+
+ 只有依赖，没有全局变量
+ bootstrap :['jquery']
+
+
+ 正常写法如下：
+ "Bootstrap": {
+            deps: ['Jquery'],
+            exports: 'Bootstrap'
+        },
+    },
+

@@ -6,4 +6,4 @@ console.log("scriptArgs");
 require(['./Config/require.config'],
     function(){
         require([scriptArgs]);
-    });
+});

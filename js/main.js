@@ -6,7 +6,7 @@ require.config({
 
     paths: {
         jquery: [
-            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',  
+            // 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',  
             'lib/jquery'  
         ] 
         }
