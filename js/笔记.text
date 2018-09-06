@@ -94,13 +94,9 @@ shim就来了
         },
     },
 
-
-
 map：不同版本的库支持的东西不一样
 
-
     map：{
-
       ‘app/api’：{
         ‘jquery’：‘lib/jquery’
       }，
@@ -108,5 +104,4 @@ map：不同版本的库支持的东西不一样
         ‘jquery’：‘lib/jquery2’
       }
     }
-
 
