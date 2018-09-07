@@ -6,10 +6,32 @@
  */
 requirejs.config({
     baseUrl:"js",
+    urlArgs:'v='+(new Date()).getTime(),//清楚缓存
     paths:{
        'jquery':'lib/jquery',
-       'api':'../app.api'
+       'api':'../app/api',
+       'css': 'lib/css.min',
+    },
+
+    // 所有的文件都会加载css.js文件
+
+     map: {
+        '*': {
+          'css': 'lib/css.min'
+        }
+      }
+,   
+
+   
+
+    shim:{
+        quick: {
+            deps: [
+                 'css!../css/quick'
+            ]
+        },
     }
+
 })
 
 require(['helper'],function(helper){
@@ -18,9 +40,17 @@ require(['helper'],function(helper){
 })
 
 
-require(['jquery','/app.api'],function($,api){
+require(['jquery','api'],function($,api){
     api.getUser().then(function(user){
         console.log(user);
     })
 })
 
+
+require([
+    'css!../css/quick',
+  ], function () {
+    alert('Styles have loaded');
+  });
+  
+//实际逻辑
