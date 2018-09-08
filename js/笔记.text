@@ -118,3 +118,7 @@ node r.js -o app.build.js
 加载css
 
 http://www.mamicode.com/info-detail-416060.html
+
+用的bootstrap版本
+
+http://www.runoob.com/bootstrap/bootstrap-navbar.html

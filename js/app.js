@@ -10,19 +10,16 @@ requirejs.config({
     paths:{
        'jquery':'lib/jquery',
        'api':'../app/api',
+       'bootstrap':'lib/bootstrap',
+       'bootstrapbundle':'lib/bootstrap.bundle.min',
        'css': 'lib/css.min',
     },
-
     // 所有的文件都会加载css.js文件
-
      map: {
         '*': {
           'css': 'lib/css.min'
         }
-      }
-,   
-
-   
+      },
 
     shim:{
         quick: {
@@ -30,6 +27,12 @@ requirejs.config({
                  'css!../css/quick'
             ]
         },
+        bootstrap: {
+            deps: ['jquery','bootstrapbundle'],
+            exports:'bootstrap'
+        },
+
+
     }
 
 })
@@ -49,8 +52,17 @@ require(['jquery','api'],function($,api){
 
 require([
     'css!../css/quick',
+    'css!../css/bootstrap.min'
   ], function () {
-    alert('Styles have loaded');
+    // alert('Styles have loaded');
+  });
+
+  require([
+    'jquery',
+    'bootstrap',
+    'bootstrapbundle'
+  ], function () {
+    // alert('Styles have loaded');
   });
   
 //实际逻辑
