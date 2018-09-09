@@ -13,6 +13,8 @@ requirejs.config({
        'bootstrap':'lib/bootstrap',
        'bootstrapbundle':'lib/bootstrap.bundle.min',
        'css': 'lib/css.min',
+       'text':'../node_modules/requirejs-text/text',
+    //    'head':'../head.html'
     },
     // 所有的文件都会加载css.js文件
      map: {
@@ -27,6 +29,7 @@ requirejs.config({
                  'css!../css/quick'
             ]
         },
+        //此处是用来控制加载顺序的
         bootstrap: {
             deps: ['jquery','bootstrapbundle'],
             exports:'bootstrap'
@@ -34,6 +37,25 @@ requirejs.config({
 
 
     }
+
+    // config:{
+    //     text:{
+    //         //请求之前请求头的设置
+
+    //         onXhr:function(xhr,url){
+    //                 console.log("url"+url);
+    //         },
+    //         createXhr: function(){
+
+    //         },
+    //         //请求完毕
+    //         onXhrComplete:function(){
+
+    //         }
+
+    //     }
+
+    // }
 
 })
 
@@ -60,9 +82,18 @@ require([
   require([
     'jquery',
     'bootstrap',
-    'bootstrapbundle'
-  ], function () {
+    'bootstrapbundle',
+    'text',
+    'text!../head.html!strip'
+  ], function (jquery,bootstrap,bootstrapbundle,text,head) {
     // alert('Styles have loaded');
+    console.log("text");
+    console.log(text);
+    console.log("head");
+    console.log(head);
+    $("#headtop").html = head;
+    $("#footerbootom").innerHTML = head;
+    //把head和footer
   });
   
 //实际逻辑
