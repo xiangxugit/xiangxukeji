@@ -1,0 +1,14 @@
+1,设置angular npm的淘宝镜像
+
+npm config set registry https://registry.npm.taobao.org
+
+安装typescript 
+npm install -g typescript
+
+安装nodejs  angular-cli 脚手架，
+npm  install -g angular-cli
+
+
+
+      2 引入vue做网络请求
+npm install vue

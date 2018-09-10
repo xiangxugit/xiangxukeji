@@ -16,7 +16,9 @@ requirejs.config({
        'text':'../node_modules/requirejs-text/text',
        'head':'../head',
        "footer":'../footer',
-       "metinfo":'../index_files/metinfo'
+       "metinfo":'../index_files/metinfo',
+       'vue':'../node_modules/vue/dist/vue',
+       'resource':'../node_modules/vue/dist/vue-resource.min'
     },
     // 所有的文件都会加载css.js文件
      map: {
@@ -46,12 +48,12 @@ requirejs.config({
         metinfo:{
             deps: ['head','footer'],
             exports:'head'
+        },
+
+        resource:{
+            deps: ['vue'],
+            exports:'resource'
         }
-
-
-
-        
-
 
     }
 
@@ -102,8 +104,10 @@ require([
     'bootstrapbundle',
     'text',
     'text!../head.html!strip',
-    'text!../footer.html!strip'
-  ], function (jquery,bootstrap,bootstrapbundle,text,head,footer) {
+    'text!../footer.html!strip',
+    'vue',
+    'resource'
+  ], function (jquery,bootstrap,bootstrapbundle,text,head,footer,vue,resource) {
     // alert('Styles have loaded');
     console.log("text");
     console.log(text);
@@ -111,7 +115,17 @@ require([
     console.log(head);
     $("#headtop").html(head);
     $("#footerbootom").html(footer);
+    console.log("vue"+vue);
     //把head和footer
+
+    //vue网络请求
+
+        //发送get请求
+        resource.get('https:www.baidu.com').then(function(res){
+            console.log("res"+res);
+        },function(){
+        });
+
   });
   
 //实际逻辑
