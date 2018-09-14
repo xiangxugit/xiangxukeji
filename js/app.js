@@ -21,17 +21,16 @@ requirejs.config({
        'resource':'../node_modules/vue/dist/vue-resource.min'
     },
     // 所有的文件都会加载css.js文件
-     map: {
-        '*': {
-          'css': 'lib/css.min'
-        }
-      },
+    //  map: {
+    //     '*': {
+    //       'css': 'lib/css.min'
+    //     }
+    //   },
 
     shim:{
         quick: {
             deps: [
                  'css!../css/quick',
-               
             ]
         },
         //此处是用来控制加载顺序的
@@ -78,17 +77,17 @@ requirejs.config({
 
 })
 
-require(['helper'],function(helper){
-    var str = helper.trim(' amd ');
-    console.log(str);
-})
+// require(['helper'],function(helper){
+//     var str = helper.trim(' amd ');
+//     console.log(str);
+// })
 
 
-require(['jquery','api'],function($,api){
-    api.getUser().then(function(user){
-        console.log(user);
-    })
-})
+// require(['jquery','api'],function($,api){
+//     api.getUser().then(function(user){
+//         console.log(user);
+//     })
+// })
 
 
 require([
@@ -107,7 +106,7 @@ require([
     'text!../footer.html!strip',
     'vue',
     'resource'
-  ], function (jquery,bootstrap,bootstrapbundle,text,head,footer,vue,resource) {
+  ], function (jquery,bootstrap,bootstrapbundle,text,head,footer,vue) {
     // alert('Styles have loaded');
     console.log("text");
     console.log(text);
@@ -120,11 +119,23 @@ require([
 
     //vue网络请求
 
-        //发送get请求
-        resource.get('https:www.baidu.com').then(function(res){
-            console.log("res"+res);
-        },function(){
-        });
+    var url = 'https:www.baidu.com';
+    // this.$http.get(url, params).then((res) => {
+    //     console.log(res);
+    // },(err) => {
+    //     console.log(err);
+    // })
+
+
+    // jquery.ajax({
+    //     type: 'GET',
+    //     url: url,
+    //     success:function(data) {
+    //         console.log("data"+data);
+    //     }
+    // });
+
+
 
   });
   
