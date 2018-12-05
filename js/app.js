@@ -108,10 +108,6 @@ require([
     'resource'
   ], function (jquery,bootstrap,bootstrapbundle,text,head,footer,vue) {
     // alert('Styles have loaded');
-    console.log("text");
-    console.log(text);
-    console.log("head");
-    console.log(head);
     $("#headtop").html(head);
     $("#footerbootom").html(footer);
     console.log("vue"+vue);
